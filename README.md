@@ -4,6 +4,7 @@
 ## Introduction  
 #### Small React Native Project with OMDB API for finding Movies with names to display posters, genre, plots, the released year.  
 #### This app is optimized for iOS, but Android works perfectly the same.
+#### This project took me 7 hours.
 ----  
 ## How to check the app out
 
