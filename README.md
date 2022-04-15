@@ -9,7 +9,7 @@
 
 ### 1. Locally  
 1. git clone this repository
-2. Type "npm start" or "expo start" [If expo or npm is already installed]
+2. Type "npm start" or "expo start" or "yarn start" [If expo or npm is already installed]
 3. Enter "i" for iOS or "a" for Android or scan the QR code on the console to check it out on your own device.
 
 -----
