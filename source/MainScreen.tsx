@@ -78,8 +78,15 @@ export default function MainScreen(): React.ReactNode {
 
       {ContentsTranslation && (
         <View style={styles.beforeAnimated}>
-          <AwesomeButton {...undefined} onPress={onPress1} width={300}>
-            <Text>Get Started</Text>
+          <AwesomeButton
+            {...undefined}
+            onPress={onPress1}
+            width={300}
+            borderRadius={20}
+            raiseLevel={8}
+            backgroundColor={"grey"}
+          >
+            <Text style={{ fontWeight: "bold" }}>Get Started</Text>
           </AwesomeButton>
         </View>
       )}
@@ -235,8 +242,9 @@ const styles = StyleSheet.create({
   titleFont: {
     textAlign: "center",
     marginTop: 16,
-    fontSize: 40,
+    fontSize: 60,
     color: "white",
+    fontWeight: "bold",
   },
   titleContainer: {
     backgroundColor: "#FFD700",
