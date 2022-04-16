@@ -1,0 +1,72 @@
+import { Platform, Statusbar, StyleSheet } from "react-native";
+
+export default StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    justifyContent: "center",
+  },
+  background: {
+    position: "absolute",
+    height: Platform.OS === "web" ? "100%" : "120%",
+    backgroundColor: "#343d46",
+    // backgroundColor: "white",
+    flex: 1,
+    left: 0,
+    right: 0,
+    top: 0,
+  },
+  titleFont: {
+    textAlign: "center",
+    marginTop: 16,
+    fontSize: 60,
+    color: "white",
+    fontWeight: "bold",
+  },
+  titleContainer: {
+    backgroundColor: "#FFD700",
+    justifyContent: "center",
+    borderBottomLeftRadius: 60,
+    borderBottomRightRadius: 60,
+  },
+  posterImage: {
+    width: 250,
+    height: 400,
+    borderRadius: 30,
+    marginBottom: 15,
+  },
+  beforeAnimated: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#343d46",
+    borderTopLeftRadius: 60,
+    borderTopRightRadius: 60,
+  },
+  afterAnimated: {
+    alignItems: "center",
+    flex: 1,
+    borderTopLeftRadius: 60,
+    borderTopRightRadius: 60,
+    backgroundColor: "#343d46",
+  },
+  textinput: {
+    margin: 20,
+    height: 50,
+    width: "80%",
+    borderRadius: 10,
+    borderTopStartRadius: 10,
+    borderTopEndRadius: 10,
+    backgroundColor: "#343d46",
+    color: "white",
+  },
+  modalView: {
+    backgroundColor: "#F2E5D9",
+    // alignContent: "center",
+    borderRadius: 20,
+    borderColor: "grey",
+    borderWidth: 1,
+    width: "90%",
+    height: "60%",
+  },
+});
