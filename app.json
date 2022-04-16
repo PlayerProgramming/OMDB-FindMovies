@@ -4,9 +4,9 @@
     "slug": "FindMovies",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/find_movies.png",
+    "icon": "./source/assets/find_movies.png",
     "splash": {
-      "image": "./assets/find_movies.png",
+      "image": "./source/assets/find_movies.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -20,12 +20,12 @@
     "android": {
       "softwareKeyboardLayoutMode": "pan",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/find_movies.png",
+        "foregroundImage": "./source/assets/find_movies.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
-      "favicon": "./assets/find_movies.png"
+      "favicon": "./source/assets/find_movies.png"
     }
   }
 }

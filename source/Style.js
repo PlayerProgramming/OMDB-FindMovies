@@ -1,4 +1,4 @@
-import { Platform, Statusbar, StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   container: {
@@ -10,7 +10,6 @@ export default StyleSheet.create({
     position: "absolute",
     height: Platform.OS === "web" ? "100%" : "120%",
     backgroundColor: "#343d46",
-    // backgroundColor: "white",
     flex: 1,
     left: 0,
     right: 0,
@@ -62,7 +61,6 @@ export default StyleSheet.create({
   },
   modalView: {
     backgroundColor: "#F2E5D9",
-    // alignContent: "center",
     borderRadius: 20,
     borderColor: "grey",
     borderWidth: 1,
