@@ -6,7 +6,6 @@ import {
   Animated,
   SafeAreaView,
   Image,
-  Platform,
   ScrollView,
   TouchableWithoutFeedback,
   Keyboard,
@@ -14,10 +13,9 @@ import {
 } from "react-native";
 import AwesomeButton from "react-native-really-awesome-button";
 import { TextInput } from "react-native-paper";
-import { white } from "react-native-paper/lib/typescript/styles/colors";
 import styles from "./Style";
 
-export default function MainScreen(): React.ReactNode {
+export default function MainScreen(): JSX.Element {
   const Titletranslation = useRef(new Animated.Value(0.8)).current;
   const [ContentsTranslation, setContentsTranslation] = useState(true);
   const [isLoading, setLoading] = useState(true);
