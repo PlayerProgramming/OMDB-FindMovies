@@ -80,11 +80,14 @@ export default function MainScreen(): JSX.Element {
             {...undefined}
             onPress={onPress1}
             width={300}
+            height={110}
             borderRadius={20}
-            raiseLevel={8}
-            backgroundColor={"grey"}
+            raiseLevel={12}
+            backgroundColor={"#FFD799"}
           >
-            <Text style={{ fontWeight: "bold" }}>Get Started</Text>
+            <Text style={{ fontWeight: "bold", fontSize: 25 }}>
+              Get Started
+            </Text>
           </AwesomeButton>
         </View>
       )}
@@ -133,7 +136,11 @@ export default function MainScreen(): JSX.Element {
               )}
             </View>
             {data.Plot && (
-              <ScrollView style={{ margin: 10 }}>
+              <ScrollView
+                showsVerticalScrollIndicator={true}
+                persistentScrollbar={true}
+                style={{ margin: 10 }}
+              >
                 <Text style={{ fontSize: 30, color: "white" }}>
                   {data.Title} ({data.Year})
                 </Text>
@@ -190,8 +197,6 @@ export default function MainScreen(): JSX.Element {
                       <Text style={{ color: "grey" }}>{data.Genre}</Text>
                       <Text
                         style={{
-                          // borderWidth: 1.5,
-                          // borderColor: "black",
                           backgroundColor: "white",
                           borderRadius: 15,
                           padding: 10,
