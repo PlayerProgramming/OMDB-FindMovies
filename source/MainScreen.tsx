@@ -14,10 +14,20 @@ import AwesomeButton from "react-native-really-awesome-button";
 import { TextInput } from "react-native-paper";
 import styles from "./Style";
 
+const fetchAPI = async (title: string) => {
+  return await fetch("http://www.omdbapi.com/?t=" + title + "&apikey=92d4b7fb")
+    .then((response) => response.json())
+    .then((json) => {
+      return json;
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+};
+
 export default function MainScreen(): JSX.Element {
   const Titletranslation = useRef(new Animated.Value(0.8)).current;
   const [ContentsTranslation, setContentsTranslation] = useState(true);
-  const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState({
     Title: "",
     Year: "",
@@ -25,27 +35,32 @@ export default function MainScreen(): JSX.Element {
     Plot: "",
     Genre: "",
   });
-  const [search, setSearch] = useState("");
   const [modalVisible, setModalVisible] = useState(false);
-
   /* ----------------------- JSON Handeling Part----------------------- */
 
   useEffect(() => {
-    fetch("http://www.omdbapi.com/?t=" + search + "&apikey=92d4b7fb")
-      .then((response) => response.json())
-      .then((json) =>
-        setData({
-          Title: json["Title"],
-          Year: json["Year"],
-          Poster: json["Poster"],
-          Plot: json["Plot"],
-          Genre: json["Genre"],
-        })
-      )
-      .catch((error) => console.error(error))
-      .finally(() => setLoading(false));
-  });
+    fetchAPI("").then((movieData: any) => {
+      setData({
+        Title: movieData.Title,
+        Year: movieData.Year,
+        Poster: movieData.Poster,
+        Plot: movieData.Plot,
+        Genre: movieData.Genre,
+      });
+    });
+  }, []);
 
+  const fetchSearch = (texts: string) => {
+    fetchAPI(texts).then((movieData: any) => {
+      setData({
+        Title: movieData.Title,
+        Year: movieData.Year,
+        Poster: movieData.Poster,
+        Plot: movieData.Plot,
+        Genre: movieData.Genre,
+      });
+    });
+  };
   /* ----------------------- Animation Handeling Part----------------------- */
   const onPress1 = () => {
     {
@@ -106,7 +121,7 @@ export default function MainScreen(): JSX.Element {
               left={<TextInput.Icon name="movie" />}
               placeholder="Search Movies"
               placeholderTextColor={"white"}
-              onChangeText={(text) => setSearch(text)}
+              onChangeText={(text) => fetchSearch(text)}
               autoComplete={false}
               autoCorrect={false}
               autoFocus={true}
