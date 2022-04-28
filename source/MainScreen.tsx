@@ -35,11 +35,13 @@ export default function MainScreen(): JSX.Element {
     Plot: "",
     Genre: "",
   });
+
   const [modalVisible, setModalVisible] = useState(false);
+  const [search, setSearch] = useState("");
   /* ----------------------- JSON Handeling Part----------------------- */
 
   useEffect(() => {
-    fetchAPI("").then((movieData: any) => {
+    fetchAPI(search).then((movieData: any) => {
       setData({
         Title: movieData.Title,
         Year: movieData.Year,
@@ -48,7 +50,7 @@ export default function MainScreen(): JSX.Element {
         Genre: movieData.Genre,
       });
     });
-  }, []);
+  });
 
   const fetchSearch = (texts: string) => {
     fetchAPI(texts).then((movieData: any) => {
