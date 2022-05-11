@@ -15,7 +15,7 @@
 3. Enter "i" for iOS or "a" for Android or scan the QR code on the console to check it out on your own device.
 
 ### 2. Web app using the website.
-1. https://omdb-findmovies.vercel.app/
+1. https://hjk-omdb-findmovies.vercel.app/
 
 This web app is only for showing how UI would work since API somehow not wokring using Expo web deployment and hosting it online.
 However, you can check the web app version locally using **index.html** inside **web-build** folder
