@@ -12,7 +12,7 @@
 2. Type "npm start" or "expo start" or "yarn start" [If expo or npm is already installed]
 3. Enter "i" for iOS or "a" for Android or scan the QR code on the console to check it out on your own device.
 
-### 2. Web app using the website.
+### 2. Using the website just for UI.
 1. https://hjk-omdb-findmovies.vercel.app/
 
 This web app is only for showing how UI would work since API somehow not wokring using Expo web deployment and hosting it online.
